@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Положение об использовании ИИ в БГУ</title>
-    <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Подключение шрифта Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -46,15 +44,12 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Шапка сайта -->
     <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <!-- Логотип -->
             <div class="flex items-center">
                 <img src="png..png" alt="Логотип БГУ" class="h-12 mr-4">
                 <span class="text-lg font-semibold text-blue-900 hidden md:block">Белорусский государственный университет</span>
             </div>
-            <!-- Переключатель языков -->
             <div class="flex space-x-2">
                 <button onclick="switchLanguage('ru')" class="lang-btn active px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300">RU</button>
                 <button onclick="switchLanguage('by')" class="lang-btn px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300">BY</button>
@@ -64,10 +59,8 @@
     </header>
 
     <div class="container mx-auto p-4 md:p-8 flex flex-col md:flex-row">
-        <!-- Боковая навигация (Sidebar) -->
         <aside class="w-full md:w-1/4 lg:w-1/5 bg-white shadow-lg rounded-lg p-6 md:mr-8 mb-6 md:mb-0 md:sticky md:top-24" style="align-self: flex-start;">
             
-            <!-- Навигация для каждого языка -->
             <nav id="nav-ru" class="lang-nav active">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Навигация (RU)</h3>
                 <ul class="space-y-2">
@@ -112,12 +105,8 @@
 
         </aside>
 
-        <!-- Основной контент -->
         <main class="w-full md:w-3/4 lg:w-4/5">
             
-            <!-- ======================= -->
-            <!-- === РУССКАЯ ВЕРСИЯ === -->
-            <!-- ======================= -->
             <div id="content-ru" class="lang-content active bg-white shadow-lg rounded-lg p-6 md:p-10">
                 <div class="text-center mb-8">
                     <p class="text-sm text-gray-600">УТВЕРЖДЕНО</p>
@@ -126,12 +115,12 @@
                 </div>
                 <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">ПОЛОЖЕНИЕ<br>об использовании технологий искусственного интеллекта в Белорусском государственном университете</h2>
 
-                <!-- Раздел 1 -->
                 <section id="ru-section1" class="content-section active space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
                     <p>1.1. Настоящее Положение (далее – Положение) определяет правовые, организационные и этические основы использования технологий искусственного интеллекта (далее – ИИ) в образовательной, научно-исследовательской и административно-управленческой деятельности учреждения образования «Белорусский государственный университет» (далее – БГУ).</p>
                     <p>1.2. Целью настоящего Положения является обеспечение ответственной, этичной и продуктивной интеграции технологий ИИ в университетскую среду, направленной на повышение качества образования, развитие научного потенциала и оптимизацию управленческих процессов, при безусловном соблюдении академических ценностей и прав всех участников образовательного процесса.</p>
                     <p>1.3. Для целей настоящего Положения под ИИ понимаются алгоритмические системы и комплексы технологических решений (включая большие языковые модели, нейронные сети и др.), способные выполнять творческие, аналитические и иные задачи, традиционно требующие участия человека.</p>
+                    
                     <p>1.4. Регулирование использования ИИ в БГУ основывается на принципах:</p>
                     <ul class="list-disc list-inside pl-5 space-y-2">
                         <li><b>Академической честности:</b> Недопустимость использования ИИ для плагиата, фальсификации и обмана.</li>
@@ -140,10 +129,15 @@
                         <li><b>Конфиденциальности и безопасности:</b> Защита персональных данных и иной информации ограниченного доступа.</li>
                         <li><b>Ответственности:</b> Личная ответственность пользователя за итоговый результат, полученный с применением ИИ.</li>
                     </ul>
-                    <p>1.5. БГУ способствует развитию культуры осознанного и этичного использования ИИ путем...</p>
+                    
+                    <p>1.5. БГУ способствует развитию культуры осознанного и этичного использования ИИ путем:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Внедрения образовательных модулей по цифровой гигиене, кибербезопасности и этике ИИ.</li>
+                        <li>Проведения регулярных семинаров и курсов повышения квалификации для профессорско-преподавательского состава и сотрудников.</li>
+                        <li>Развития локальной инфраструктуры и приоритетного использования верифицированных (в том числе отечественных или университетских) ИИ-платформ для минимизации рисков, связанных с обработкой данных.</li>
+                    </ul>
                 </section>
 
-                <!-- Раздел 2 -->
                 <section id="ru-section2" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 2. ОБЩИЕ ОГРАНИЧЕНИЯ И ЗАПРЕТЫ</h3>
                     <p>2.1. Во всех сферах деятельности в БГУ <b>запрещается</b> использование технологий ИИ для:</p>
@@ -157,7 +151,6 @@
                     </ul>
                 </section>
 
-                <!-- Раздел 3 -->
                 <section id="ru-section3" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 3. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ ОБУЧАЮЩИМИСЯ</h3>
                     <p>3.1. Обучающиеся вправе использовать ИИ как вспомогательный инструмент для поиска информации, анализа данных, изучения новых тем и подготовки к занятиям при условии соблюдения академической честности.</p>
@@ -166,7 +159,6 @@
                     <p>3.4. Запрещается представление сгенерированного ИИ контента (текста, кода, решений задач) как результата собственной самостоятельной работы без его существенной творческой переработки и соответствующего декларирования.</p>
                 </section>
 
-                <!-- Раздел 4 -->
                 <section id="ru-section4" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 4. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ ПРЕПОДАВАТЕЛЯМИ</h3>
                     <p>4.1. Преподаватели вправе интегрировать ИИ в учебный процесс для обогащения методических материалов, разработки заданий и адаптации обучения.</p>
@@ -179,7 +171,6 @@
                     </ul>
                 </section>
 
-                <!-- Раздел 5 -->
                 <section id="ru-section5" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 5. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ В НАУЧНО-ИССЛЕДОВАТЕЛЬСКИХ ЦЕЛЯХ</h3>
                     <p>5.1. Допускается использование ИИ для анализа больших данных, моделирования, обработки литературы и других вспомогательных исследовательских задач.</p>
@@ -192,7 +183,6 @@
                     <p>5.3. Использование ИИ для генерации гипотез, текста или выводов не отменяет необходимости авторского научного вклада и ответственности исследователя.</p>
                 </section>
 
-                <!-- Раздел 6 -->
                 <section id="ru-section6" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 6. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ АДМИНИСТРАТИВНЫМИ СОТРУДНИКАМИ</h3>
                     <p>6.1. Использование ИИ в административно-управленческой деятельности допускается для оптимизации рабочих процессов (делопроизводство, аналитика, планирование) при условии обеспечения цифрового суверенитета и безопасности данных.</p>
@@ -204,7 +194,6 @@
                     </ul>
                 </section>
 
-                <!-- Раздел 7 -->
                 <section id="ru-section7" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 7. СОБЛЮДЕНИЕ ПОЛОЖЕНИЯ И КОНТРОЛЬ</h3>
                     <p>7.1. Для координации, мониторинга и консультативного сопровождения применения технологий ИИ в БГУ создается <b>«Совет по этике использования ИИ»</b> (далее – Совет).</p>
@@ -220,7 +209,6 @@
                     <p>7.5. Решение о применении мер дисциплинарного взыскания принимается уполномоченным должностным лицом (ректором, проректором, деканом) на основании служебной записки, представления или заключения Совета.</p>
                 </section>
 
-                <!-- Раздел 8 -->
                 <section id="ru-section8" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 8. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h3>
                     <p>8.1. Настоящее Положение вступает в силу с момента его утверждения ректором БГУ.</p>
@@ -230,9 +218,6 @@
                 </section>
             </div>
 
-            <!-- ========================== -->
-            <!-- === БЕЛАРУСКАЯ ВЕРСІЯ === -->
-            <!-- ========================== -->
             <div id="content-by" class="lang-content bg-white shadow-lg rounded-lg p-6 md:p-10">
                 <div class="text-center mb-8">
                     <p class="text-sm text-gray-600">ЗАЦВЕРДЖАНА</p>
@@ -241,12 +226,12 @@
                 </div>
                 <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">ПАЛАЖЭННЕ<br>аб выкарыстанні тэхналогій штучнага інтэлекту ў Беларускім дзяржаўным універсітэце</h2>
 
-                <!-- Раздел 1 BY -->
                 <section id="by-section1" class="content-section active space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 1. АГУЛЬНЫЯ ПАЛАЖЭННІ</h3>
                     <p>1.1. Гэтае Палажэнне (далей – Палажэнне) вызначае прававыя, арганізацыйныя і этычныя асновы выкарыстання тэхналогій штучнага інтэлекту (далей – ШІ) у адукацыйнай, навукова-даследчай і адміністрацыйна-кіраўніцкай дзейнасці ўстановы адукацыі «Беларускі дзяржаўны ўніверсітэт» (далей – БДУ).</p>
                     <p>1.2. Мэтай гэтага Палажэння з'яўляецца забеспячэнне адказнай, этычнай і прадуктыўнай інтэграцыі тэхналогій ШІ ва ўніверсітэцкае асяроддзе, накіраванай на павышэнне якасці адукацыі, развіццё навуковага патэнцыялу і аптымізацыю кіраўніцкіх працэсаў, пры безумоўным захаванні акадэмічных каштоўнасцей і правоў усіх удзельнікаў адукацыйнага працэсу.</p>
                     <p>1.3. Для мэт гэтага Палажэння пад ШІ разумеюцца алгарытмічныя сістэмы і комплексы тэхналагічных рашэнняў (уключаючы вялікія моўныя мадэлі, нейронныя сеткі і інш.), здольныя выконваць творчыя, аналітычныя і іншыя задачы, якія традыцыйна патрабуюць удзелу чалавека.</p>
+                    
                     <p>1.4. Рэгуляванне выкарыстання ШІ ў БДУ грунтуецца на прынцыпах:</p>
                     <ul class="list-disc list-inside pl-5 space-y-2">
                         <li><b>Акадэмічнай сумленнасці:</b> Недапушчальнасць выкарыстання ШІ для плагіяту, фальсіфікацыі і падману.</li>
@@ -255,9 +240,15 @@
                         <li><b>Канфідэнцыяльнасці і бяспекі:</b> Абарона персанальных даных і іншай інфармацыі абмежаванага доступу.</li>
                         <li><b>Адказнасці:</b> Асабістая адказнасць карыстальніка за выніковы рэзультат, атрыманы з прымяненнем ШІ.</li>
                     </ul>
+
+                    <p>1.5. БДУ спрыяе развіццю культуры ўсвядомленага і этычнага выкарыстання ШІ шляхам:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Укаранення адукацыйных модуляў па лічбавай гігіене, кібербяспецы і этыцы ШІ.</li>
+                        <li>Правядзення рэгулярных семінараў і курсаў павышэння кваліфікацыі для прафесарска-выкладчыцкага складу і супрацоўнікаў.</li>
+                        <li>Развіцця лакальнай інфраструктуры і прыярытэтнага выкарыстання верыфікаваных (у тым ліку айчынных або ўніверсітэцкіх) ШІ-платформ для мінімізацыі рызык, звязаных з апрацоўкай даных.</li>
+                    </ul>
                 </section>
 
-                <!-- Раздел 2 BY -->
                 <section id="by-section2" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 2. АГУЛЬНЫЯ АБМЕЖАВАННІ І ЗАБАРОНЫ</h3>
                     <p>2.1. Ва ўсіх сферах дзейнасці ў БДУ <b>забараняецца</b> выкарыстанне тэхналогій ШІ для:</p>
@@ -271,14 +262,14 @@
                     </ul>
                 </section>
                 
-                <!-- Раздел 3 BY -->
                 <section id="by-section3" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 3. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ НАВУЧЭНЦАМІ</h3>
                     <p>3.1. Навучэнцы маюць права выкарыстоўваць ШІ як дапаможны інструмент для пошуку інфармацыі, аналізу даных, вывучэння новых тэм і падрыхтоўкі да заняткаў пры ўмове захавання акадэмічнай сумленнасці.</p>
                     <p>3.2. <b>Абавязковае дэклараванне:</b> Пры выкананні пісьмовых работ (курсавых, дыпломных, эсэ, рэфератаў і інш.), якія падлягаюць ацэнцы, навучэнец <b>абавязаны</b> ў відавочнай форме (у тэксце работы або суправаджальным дакуменце) інфармаваць выкладчыка аб факце і ступені выкарыстання тэхналогій ШІ.</p>
+                    <p>3.3. Навучэнец нясе поўную адказнасць за дакладнасць, арыгінальнасць і этычнасць прадстаўленага выніку, нават калі ён быў атрыманы з дапамогай ШІ. Спасылкі на ШІ як на першакрыніцу інфармацыі або аўтара тэксту не дапускаюцца.</p>
+                    <p>3.4. Забараняецца прадстаўленне згенераванага ШІ кантэнту (тэксту, кода, рашэнняў задач) як выніку ўласнай самастойнай працы без яго істотнай творчай перапрацоўкі і адпаведнага дэкларавання.</p>
                 </section>
 
-                <!-- Раздел 4 BY -->
                 <section id="by-section4" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 4. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ ВЫКЛАДЧЫКАМІ</h3>
                     <p>4.1. Выкладчыкі маюць права інтэграваць ШІ ў навучальны працэс для ўзбагачэння метадычных матэрыялаў, распрацоўкі заданняў і адаптацыі навучання.</p>
@@ -287,10 +278,10 @@
                         <li>Развіваць у навучэнцаў навыкі крытычнай ацэнкі інфармацыі, атрыманай ад ШІ.</li>
                         <li>Выразна інфармаваць навучэнцаў аб дапушчальных і недапушчальных спосабах выкарыстання ШІ ў рамках вывучаемай дысцыпліны.</li>
                         <li>Пры распрацоўцы заданняў і метадаў кантролю ведаў <b>зрушваць акцэнт</b> з рэпрадуктыўнага ўзнаўлення інфармацыі на аналіз працэсу рашэння, аргументацыю, інтэрпрэтацыю і практыка-арыентаваныя формы работы ў аўдыторыі.</li>
+                        <li>Выконваць канфідэнцыяльнасць пры выкарыстанні ШІ для ацэнкі работ навучэнцаў, не дапускаючы перадачы іх персанальных даных у знешнія сістэмы без згоды.</li>
                     </ul>
                 </section>
 
-                <!-- Раздел 5 BY -->
                 <section id="by-section5" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 5. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ Ў НАВУКОВА-ДАСЛЕДЧЫХ МЭТАХ</h3>
                     <p>5.1. Дапускаецца выкарыстанне ШІ для аналізу вялікіх даных, мадэлявання, апрацоўкі літаратуры і іншых дапаможных даследчых задач.</p>
@@ -298,42 +289,47 @@
                     <ul class="list-disc list-inside pl-5 space-y-2">
                         <li>Крытычна правяраць і верыфікаваць даныя, атрыманыя з дапамогай ШІ.</li>
                         <li>Празрыста ўказваць у раздзеле «Метадалогія» або «Падзякі» факт выкарыстання ШІ-інструментаў, калі іх уклад у даследаванне быў істотным.</li>
+                        <li>Несці поўную адказнасць за навуковую дакладнасць і арыгінальнасць вынікаў.</li>
                     </ul>
+                    <p>5.3. Выкарыстанне ШІ для генерацыі гіпотэз, тэксту або высноў не адмяняе неабходнасці аўтарскага навуковага ўкладу і адказнасці даследчыка.</p>
                 </section>
 
-                <!-- Раздел 6 BY -->
                 <section id="by-section6" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 6. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ АДМІНІСТРАЦЫЙНЫМІ СУПРАЦОЎНІКАМІ</h3>
                     <p>6.1. Выкарыстанне ШІ ў адміністрацыйна-кіраўніцкай дзейнасці дапускаецца для аптымізацыі рабочых працэсаў (дзелаводства, аналітыка, планаванне) пры ўмове забеспячэння лічбавага суверэнітэту і бяспекі даных.</p>
+                    <p>6.2. Супрацоўнікі БДУ, адказныя за ўкараненне і выкарыстанне ШІ-сістэм, абавязаны:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Забяспечваць строгае выкананне заканадаўства аб абароне персанальных даных.</li>
+                        <li>Укараняць празрыстыя пратаколы захоўвання і апрацоўкі даных.</li>
+                        <li>Прыярытэтна выкарыстоўваць лакальныя, універсітэцкія або сертыфікаваныя ва ўстаноўленым парадку ШІ-платформы.</li>
+                    </ul>
                 </section>
 
-                <!-- Раздел 7 BY -->
                 <section id="by-section7" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 7. ЗАХАВАННЕ ПАЛАЖЭННЯ І КАНТРОЛЬ</h3>
                     <p>7.1. Для каардынацыі, маніторынгу і кансультатыўнага суправаджэння прымянення тэхналогій ШІ ў БДУ ствараецца <b>«Савет па этыцы выкарыстання ШІ»</b> (далей – Савет).</p>
+                    <p>7.2. Склад Савета фарміруецца з ліку прадстаўнікоў прафесарска-выкладчыцкага складу, навучэнцаў, ІТ-спецыялістаў, юрыстаў і адміністрацыйных работнікаў і зацвярджаецца загадам рэктара БДУ.</p>
                     <p>7.3. Савет ажыццяўляе наступныя функцыі:</p>
                     <ul class="list-disc list-inside pl-5 space-y-2">
-                        <li>Маніторынг практык выкарыстання ШІ.</li>
-                        <li>Кансультатыўнае суправаджэнне выкладчыкаў, студэнтаў і супрацоўнікаў.</li>
-                        <li>Падрыхтоўку прапаноў па актуалізацыі Палажэння.</li>
-                        <li>Разгляд спрэчных сітуацый і выпадкаў нядобрасумленнага выкарыстання ШІ.</li>
+                        <li>Маніторынг практык выкарыстання ШІ ў адукацыйным, навуковым і адміністрацыйным асяроддзі БДУ.</li>
+                        <li>Кансультатыўнае суправаджэнне выкладчыкаў, студэнтаў і супрацоўнікаў па пытаннях этычнага і правамернага прымянення ШІ.</li>
+                        <li>Падрыхтоўку прапаноў па актуалізацыі і ўдасканаленні гэтага Палажэння з улікам тэхналагічнага прагрэсу і правапрымяняльнай практыкі.</li>
+                        <li>Разгляд спрэчных сітуацый і выпадкаў нядобрасумленнага выкарыстання ШІ, выкладзеных у Раздзелах 3-6.</li>
                     </ul>
-                    <p>7.4. Парушэнне гэтага Палажэння з'яўляецца парушэннем статута БДУ і цягне за сабой прымяненне мер <b>дысцыплінарнага спагнання</b> (заўвага, вымова, адлічэнне, звальненне).</p>
+                    <p>7.4. Парушэнне гэтага Палажэння з'яўляецца парушэннем статута БДУ і правілаў унутранага распарадку і цягне за сабой прымяненне мер <b>дысцыплінарнага спагнання</b> (заўвага, вымова, адлічэнне, звальненне) у парадку, устаноўленым заканадаўствам Рэспублікі Беларусь і ЛНПА БДУ.</p>
+                    <p>7.5. Рашэнне аб прымяненні мер дысцыплінарнага спагнання прымаецца ўпаўнаважанай службовай асобай (рэктарам, прарэктарам, дэканам) на падставе службовай запіскі, прадстаўлення або заключэння Савета.</p>
                 </section>
 
-                <!-- Раздел 8 BY -->
                 <section id="by-section8" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 8. ЗАКЛЮЧНЫЯ ПАЛАЖЭННІ</h3>
                     <p>8.1. Гэтае Палажэнне ўступае ў сілу з моманту яго зацвярджэння рэктарам БДУ.</p>
                     <p>8.2. Палажэнне з'яўляецца абавязковым для выканання ўсімі навучэнцамі і работнікамі БДУ.</p>
-                    <p>8.3. Перагляд Палажэння ажыццяўляецца па меры неабходнасці, але не радзей аднаго разу ў два гады.</p>
+                    <p>8.3. Змены і дапаўненні ў гэтае Палажэнне ўносяцца ва ўстаноўленым парадку. Перагляд Палажэння ажыццяўляецца па меры неабходнасці, але не радзей аднаго разу ў два гады.</p>
+                    <p>8.4. Усе пытанні, не ўрэгуляваныя гэтым Палажэннем, вырашаюцца ў адпаведнасці з дзеючым заканадаўствам Рэспублікі Беларусь і іншымі ЛНПА БДУ.</p>
                 </section>
             </div>
 
 
-            <!-- ======================= -->
-            <!-- === ENGLISH VERSION === -->
-            <!-- ======================= -->
             <div id="content-en" class="lang-content bg-white shadow-lg rounded-lg p-6 md:p-10">
                 <div class="text-center mb-8">
                     <p class="text-sm text-gray-600">APPROVED</p>
@@ -342,12 +338,12 @@
                 </div>
                 <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">REGULATION<br>on the use of artificial intelligence technologies at Belarusian State University</h2>
 
-                <!-- Section 1 EN -->
                 <section id="en-section1" class="content-section active space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 1. GENERAL PROVISIONS</h3>
                     <p>1.1. This Regulation (hereinafter – the Regulation) defines the legal, organizational, and ethical framework for the use of artificial intelligence technologies (hereinafter – AI) in the educational, research, and administrative activities of the educational institution "Belarusian State University" (hereinafter – BSU).</p>
                     <p>1.2. The purpose of this Regulation is to ensure the responsible, ethical, and productive integration of AI technologies into the university environment, aimed at improving the quality of education, developing scientific potential, and optimizing management processes, while unconditionally respecting academic values and the rights of all participants in the educational process.</p>
                     <p>1.3. For the purposes of this Regulation, AI refers to algorithmic systems and complexes of technological solutions (including large language models, neural networks, etc.) capable of performing creative, analytical, and other tasks traditionally requiring human involvement.</p>
+                    
                     <p>1.4. The regulation of AI use at BSU is based on the principles of:</p>
                     <ul class="list-disc list-inside pl-5 space-y-2">
                         <li><b>Academic Integrity:</b> The inadmissibility of using AI for plagiarism, falsification, and deception.</li>
@@ -356,9 +352,15 @@
                         <li><b>Confidentiality and Security:</b> Protection of personal data and other restricted information.</li>
                         <li><b>Accountability:</b> Personal responsibility of the user for the final result obtained with the use of AI.</li>
                     </ul>
+                    
+                    <p>1.5. BSU promotes the development of a culture of conscious and ethical AI use through:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Implementation of educational modules on digital hygiene, cybersecurity, and AI ethics.</li>
+                        <li>Conducting regular seminars and advanced training courses for faculty and staff.</li>
+                        <li>Development of local infrastructure and prioritizing the use of verified (including domestic or university) AI platforms to minimize risks associated with data processing.</li>
+                    </ul>
                 </section>
 
-                <!-- Section 2 EN -->
                 <section id="en-section2" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 2. GENERAL RESTRICTIONS AND PROHIBITIONS</h3>
                     <p>2.1. In all spheres of activity at BSU, the use of AI technologies is <b>prohibited</b> for:</p>
@@ -372,7 +374,6 @@
                     </ul>
                 </section>
                 
-                <!-- Section 3 EN -->
                 <section id="en-section3" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 3. REGULATION OF AI USE BY STUDENTS</h3>
                     <p>3.1. Students are entitled to use AI as an auxiliary tool for searching for information, analyzing data,
@@ -381,9 +382,10 @@
                         reports, etc.) that are subject to assessment, the student is <b>obliged</b> to explicitly inform the
                         instructor (in the text of the work or an accompanying document) about the fact and extent of AI
                         technology use.</p>
+                    <p>3.3. The student bears full responsibility for the authenticity, originality, and ethical soundness of the submitted result, even if it was obtained with the help of AI. References to AI as the primary source of information or the author of the text are not permitted.</p>
+                    <p>3.4. It is prohibited to submit AI-generated content (text, code, solutions to problems) as the result of one's own independent work without its substantial creative revision and corresponding declaration.</p>
                 </section>
 
-                <!-- Section 4 EN -->
                 <section id="en-section4" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 4. REGULATION OF AI USE BY FACULTY</h3>
                     <p>4.1. Faculty members are entitled to integrate AI into the educational process to enrich
@@ -396,10 +398,10 @@
                         <li>When developing assignments and knowledge control methods, <b>shift the focus</b> from the
                             reproductive reproduction of information to the analysis of the solution process,
                             argumentation, interpretation, and practice-oriented forms of work in the classroom.</li>
+                        <li>Maintain confidentiality when using AI to assess student work, prohibiting the transfer of their personal data to external systems without consent.</li>
                     </ul>
                 </section>
 
-                <!-- Section 5 EN -->
                 <section id="en-section5" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 5. REGULATION OF AI USE FOR RESEARCH PURPOSES</h3>
                     <p>5.1. The use of AI is permitted for analyzing big data, modeling, processing literature, and other
@@ -409,41 +411,48 @@
                         <li>Critically check and verify data obtained with the help of AI.</li>
                         <li>Transparently indicate in the "Methodology" or "Acknowledgments" section the fact of
                             using AI tools if their contribution to the research was significant.</li>
+                        <li>Bear full responsibility for the scientific reliability and originality of the results.</li>
                     </ul>
+                    <p>5.3. The use of AI for generating hypotheses, text, or conclusions does not negate the necessity of the author's scientific contribution and the researcher's responsibility.</p>
                 </section>
 
-                <!-- Section 6 EN -->
                 <section id="en-section6" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 6. REGULATION OF AI USE BY ADMINISTRATIVE STAFF</h3>
                     <p>6.1. The use of AI in administrative and managerial activities is permitted to optimize work
                         processes (document management, analytics, planning) provided that digital sovereignty and data
                         security are ensured.</p>
+                    <p>6.2. BSU employees responsible for the implementation and use of AI systems are obliged to:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Ensure strict compliance with personal data protection legislation.</li>
+                        <li>Implement transparent protocols for data storage and processing.</li>
+                        <li>Prioritize the use of local, university-owned, or certified AI platforms.</li>
+                    </ul>
                 </section>
 
-                <!-- Section 7 EN -->
                 <section id="en-section7" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 7. COMPLIANCE AND MONITORING</h3>
                     <p>7.1. To coordinate, monitor, and provide advisory support for the use of AI technologies at BSU,
                         an <b>"AI Ethics Council"</b> (hereinafter – the Council) is established.</p>
+                    <p>7.2. The composition of the Council shall be formed from representatives of the faculty, students, IT specialists, lawyers, and administrative staff and approved by the order of the BSU Rector.</p>
                     <p>7.3. The Council performs the following functions:</p>
                     <ul class="list-disc list-inside pl-5 space-y-2">
-                        <li>Monitoring AI usage practices.</li>
-                        <li>Providing advisory support to faculty, students, and staff.</li>
-                        <li>Preparing proposals for updating the Regulation.</li>
-                        <li>Reviewing disputes and cases of unethical AI use.</li>
+                        <li>Monitoring AI usage practices in the educational, scientific, and administrative environments of BSU.</li>
+                        <li>Providing advisory support to faculty, students, and staff on ethical and lawful AI application.</li>
+                        <li>Preparing proposals for updating and improving this Regulation, taking into account technological progress and enforcement practice.</li>
+                        <li>Reviewing disputes and cases of unethical AI use, as outlined in Sections 3-6.</li>
                     </ul>
-                    <p>7.4. Violation of this Regulation is a violation of the BSU charter and internal regulations and
+                    <p>7.4. Violation of this Regulation constitutes a violation of the BSU charter and internal regulations and
                         entails the application of <b>disciplinary measures</b> (reprimand, censure, expulsion,
-                        dismissal) in accordance with the legislation of the Republic of Belarus.</p>
+                        dismissal) in accordance with the legislation of the Republic of Belarus and BSU's local regulatory acts.</p>
+                    <p>7.5. The decision to apply disciplinary measures is made by the authorized official (Rector, Vice-Rector, Dean) based on an official memo, recommendation, or the Council's conclusion.</p>
                 </section>
 
-                <!-- Section 8 EN -->
                 <section id="en-section8" class="content-section space-y-4">
                     <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 8. FINAL PROVISIONS</h3>
                     <p>8.1. This Regulation comes into force from the moment of its approval by the BSU Rector.</p>
                     <p>8.2. The Regulation is mandatory for all students and employees of BSU.</p>
-                    <p>8.3. Revisions to the Regulation shall be carried out as necessary, but at least once every two
-                        years.</p>
+                    <p>8.3. Amendments and additions to this Regulation shall be introduced in the established manner. Revisions to the Regulation shall be carried out as necessary, but at least once every two years.</p>
+                    <p>8.4. All matters not regulated by this Regulation shall be resolved in accordance with the current legislation of the Republic of Belarus and other local regulatory acts of BSU.</p>
                 </section>
             </div>
             
@@ -538,4 +547,3 @@
 
 </body>
 </html>
-
