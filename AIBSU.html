@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Положение об использовании ИИ в БГУ</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение шрифта Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        /* Стили для активной вкладки в навигации */
+        .nav-link.active {
+            background-color: #eef2ff; /* indigo-50 */
+            color: #312e81; /* indigo-900 */
+            font-weight: 600;
+        }
+        /* Стили для активной кнопки языка */
+        .lang-btn.active {
+            background-color: #3730a3; /* indigo-800 */
+            color: white;
+        }
+        /* Скрытие всех разделов контента по умолчанию */
+        .content-section {
+            display: none;
+        }
+        /* Отображение активного раздела */
+        .content-section.active {
+            display: block;
+        }
+        /* Скрытие всех языковых версий по умолчанию */
+        .lang-content {
+            display: none;
+        }
+        /* Отображение активной языковой версии */
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Шапка сайта -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Логотип -->
+            <div class="flex items-center">
+                <img src="png..png" alt="Логотип БГУ" class="h-12 mr-4">
+                <span class="text-lg font-semibold text-blue-900 hidden md:block">Белорусский государственный университет</span>
+            </div>
+            <!-- Переключатель языков -->
+            <div class="flex space-x-2">
+                <button onclick="switchLanguage('ru')" class="lang-btn active px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300">RU</button>
+                <button onclick="switchLanguage('by')" class="lang-btn px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300">BY</button>
+                <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto p-4 md:p-8 flex flex-col md:flex-row">
+        <!-- Боковая навигация (Sidebar) -->
+        <aside class="w-full md:w-1/4 lg:w-1/5 bg-white shadow-lg rounded-lg p-6 md:mr-8 mb-6 md:mb-0 md:sticky md:top-24" style="align-self: flex-start;">
+            
+            <!-- Навигация для каждого языка -->
+            <nav id="nav-ru" class="lang-nav active">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Навигация (RU)</h3>
+                <ul class="space-y-2">
+                    <li><a href="#ru-section1" onclick="showSection('ru', 'ru-section1')" class="nav-link active block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 1. Общие положения</a></li>
+                    <li><a href="#ru-section2" onclick="showSection('ru', 'ru-section2')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 2. Ограничения</a></li>
+                    <li><a href="#ru-section3" onclick="showSection('ru', 'ru-section3')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 3. Обучающиеся</a></li>
+                    <li><a href="#ru-section4" onclick="showSection('ru', 'ru-section4')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 4. Преподаватели</a></li>
+                    <li><a href="#ru-section5" onclick="showSection('ru', 'ru-section5')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 5. НИР</a></li>
+                    <li><a href="#ru-section6" onclick="showSection('ru', 'ru-section6')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 6. Сотрудники</a></li>
+                    <li><a href="#ru-section7" onclick="showSection('ru', 'ru-section7')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 7. Контроль</a></li>
+                    <li><a href="#ru-section8" onclick="showSection('ru', 'ru-section8')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 8. Заключение</a></li>
+                </ul>
+            </nav>
+            
+            <nav id="nav-by" class="lang-nav" style="display: none;">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Навігацыя (BY)</h3>
+                <ul class="space-y-2">
+                    <li><a href="#by-section1" onclick="showSection('by', 'by-section1')" class="nav-link active block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 1. Агульныя палажэнні</a></li>
+                    <li><a href="#by-section2" onclick="showSection('by', 'by-section2')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 2. Абмежаванні</a></li>
+                    <li><a href="#by-section3" onclick="showSection('by', 'by-section3')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 3. Навучэнцы</a></li>
+                    <li><a href="#by-section4" onclick="showSection('by', 'by-section4')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 4. Выкладчыкі</a></li>
+                    <li><a href="#by-section5" onclick="showSection('by', 'by-section5')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 5. НДР</a></li>
+                    <li><a href="#by-section6" onclick="showSection('by', 'by-section6')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 6. Супрацоўнікі</a></li>
+                    <li><a href="#by-section7" onclick="showSection('by', 'by-section7')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 7. Кантроль</a></li>
+                    <li><a href="#by-section8" onclick="showSection('by', 'by-section8')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Раздел 8. Заключэнне</a></li>
+                </ul>
+            </nav>
+
+            <nav id="nav-en" class="lang-nav" style="display: none;">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Navigation (EN)</h3>
+                <ul class="space-y-2">
+                    <li><a href="#en-section1" onclick="showSection('en', 'en-section1')" class="nav-link active block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 1. General Provisions</a></li>
+                    <li><a href="#en-section2" onclick="showSection('en', 'en-section2')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 2. Restrictions</a></li>
+                    <li><a href="#en-section3" onclick="showSection('en', 'en-section3')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 3. Students</a></li>
+                    <li><a href="#en-section4" onclick="showSection('en', 'en-section4')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 4. Faculty</a></li>
+                    <li><a href="#en-section5" onclick="showSection('en', 'en-section5')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 5. Research</a></li>
+                    <li><a href="#en-section6" onclick="showSection('en', 'en-section6')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 6. Staff</a></li>
+                    <li><a href="#en-section7" onclick="showSection('en', 'en-section7')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 7. Compliance</a></li>
+                    <li><a href="#en-section8" onclick="showSection('en', 'en-section8')" class="nav-link block px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100">Section 8. Final Provisions</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="w-full md:w-3/4 lg:w-4/5">
+            
+            <!-- ======================= -->
+            <!-- === РУССКАЯ ВЕРСИЯ === -->
+            <!-- ======================= -->
+            <div id="content-ru" class="lang-content active bg-white shadow-lg rounded-lg p-6 md:p-10">
+                <div class="text-center mb-8">
+                    <p class="text-sm text-gray-600">УТВЕРЖДЕНО</p>
+                    <p class="text-sm text-gray-600">Приказом ректора БГУ</p>
+                    <p class="text-sm text-gray-600">от «__» ________ 20__ г. № ____</p>
+                </div>
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">ПОЛОЖЕНИЕ<br>об использовании технологий искусственного интеллекта в Белорусском государственном университете</h2>
+
+                <!-- Раздел 1 -->
+                <section id="ru-section1" class="content-section active space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+                    <p>1.1. Настоящее Положение (далее – Положение) определяет правовые, организационные и этические основы использования технологий искусственного интеллекта (далее – ИИ) в образовательной, научно-исследовательской и административно-управленческой деятельности учреждения образования «Белорусский государственный университет» (далее – БГУ).</p>
+                    <p>1.2. Целью настоящего Положения является обеспечение ответственной, этичной и продуктивной интеграции технологий ИИ в университетскую среду, направленной на повышение качества образования, развитие научного потенциала и оптимизацию управленческих процессов, при безусловном соблюдении академических ценностей и прав всех участников образовательного процесса.</p>
+                    <p>1.3. Для целей настоящего Положения под ИИ понимаются алгоритмические системы и комплексы технологических решений (включая большие языковые модели, нейронные сети и др.), способные выполнять творческие, аналитические и иные задачи, традиционно требующие участия человека.</p>
+                    <p>1.4. Регулирование использования ИИ в БГУ основывается на принципах:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li><b>Академической честности:</b> Недопустимость использования ИИ для плагиата, фальсификации и обмана.</li>
+                        <li><b>Педагогической продуктивности:</b> Использование ИИ как инструмента для развития критического мышления, а не его подмены.</li>
+                        <li><b>Прозрачности:</b> Обязательное декларирование использования ИИ в случаях, установленных настоящим Положением.</li>
+                        <li><b>Конфиденциальности и безопасности:</b> Защита персональных данных и иной информации ограниченного доступа.</li>
+                        <li><b>Ответственности:</b> Личная ответственность пользователя за итоговый результат, полученный с применением ИИ.</li>
+                    </ul>
+                    <p>1.5. БГУ способствует развитию культуры осознанного и этичного использования ИИ путем...</p>
+                </section>
+
+                <!-- Раздел 2 -->
+                <section id="ru-section2" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 2. ОБЩИЕ ОГРАНИЧЕНИЯ И ЗАПРЕТЫ</h3>
+                    <p>2.1. Во всех сферах деятельности в БГУ <b>запрещается</b> использование технологий ИИ для:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Фальсификации научных данных, образовательных результатов, данных отчетности или любой иной служебной информации.</li>
+                        <li>Создания, хранения или распространения контента, нарушающего законодательство Республики Беларусь, устав БГУ, правила внутреннего распорядка, а также общепринятые этические нормы.</li>
+                        <li>Нарушения авторских прав и прав интеллектуальной собственности третьих лиц.</li>
+                        <li>Передачи персональных данных, служебной информации или иной информации ограниченного доступа в ИИ-системы без надлежащего согласия субъектов данных и (или) разрешения уполномоченных лиц БГУ.</li>
+                        <li>Применения несертифицированных, небезопасных или неэтичных ИИ-сервисов, не одобренных Советом по этике использования ИИ (Раздел 7).</li>
+                        <li>Осуществления любых форм дискриминации, травли (буллинга) или создания враждебной среды.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 3 -->
+                <section id="ru-section3" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 3. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ ОБУЧАЮЩИМИСЯ</h3>
+                    <p>3.1. Обучающиеся вправе использовать ИИ как вспомогательный инструмент для поиска информации, анализа данных, изучения новых тем и подготовки к занятиям при условии соблюдения академической честности.</p>
+                    <p>3.2. <b>Обязательное декларирование:</b> При выполнении письменных работ (курсовых, дипломных, эссе, рефератов и др.), подлежащих оценке, обучающийся <b>обязан</b> в явной форме (в тексте работы или сопроводительном документе) информировать преподавателя о факте и степени использования технологий ИИ.</p>
+                    <p>3.3. Обучающийся несет полную ответственность за достоверность, оригинальность и этичность представленного результата, даже если он был получен с помощью ИИ. Ссылки на ИИ как на первоисточник информации или автора текста не допускаются.</p>
+                    <p>3.4. Запрещается представление сгенерированного ИИ контента (текста, кода, решений задач) как результата собственной самостоятельной работы без его существенной творческой переработки и соответствующего декларирования.</p>
+                </section>
+
+                <!-- Раздел 4 -->
+                <section id="ru-section4" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 4. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ ПРЕПОДАВАТЕЛЯМИ</h3>
+                    <p>4.1. Преподаватели вправе интегрировать ИИ в учебный процесс для обогащения методических материалов, разработки заданий и адаптации обучения.</p>
+                    <p>4.2. Преподаватели обязаны:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Развивать у обучающихся навыки критической оценки информации, получаемой от ИИ.</li>
+                        <li>Четко информировать обучающихся о допустимых и недопустимых способах использования ИИ в рамках изучаемой дисциплины.</li>
+                        <li>При разработке заданий и методов контроля знаний <b>смещать акцент</b> с репродуктивного воспроизведения информации на анализ процесса решения, аргументацию, интерпретацию и практико-ориентированные формы работы в аудитории.</li>
+                        <li>Соблюдать конфиденциальность при использовании ИИ для оценки работ обучающихся, не допуская передачи их персональных данных во внешние системы без согласия.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 5 -->
+                <section id="ru-section5" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 5. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ В НАУЧНО-ИССЛЕДОВАТЕЛЬСКИХ ЦЕЛЯХ</h3>
+                    <p>5.1. Допускается использование ИИ для анализа больших данных, моделирования, обработки литературы и других вспомогательных исследовательских задач.</p>
+                    <p>5.2. При подготовке научных публикаций исследователи БГУ обязаны:</p>
+                     <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Критически проверять и верифицировать данные, полученные с помощью ИИ.</li>
+                        <li>Прозрачно указывать в разделе «Методология» или «Благодарности» факт использования ИИ-инструментов, если их вклад в исследование был существенным.</li>
+                        <li>Нести полную ответственность за научную достоверность и оригинальность результатов.</li>
+                    </ul>
+                    <p>5.3. Использование ИИ для генерации гипотез, текста или выводов не отменяет необходимости авторского научного вклада и ответственности исследователя.</p>
+                </section>
+
+                <!-- Раздел 6 -->
+                <section id="ru-section6" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 6. РЕГЛАМЕНТАЦИЯ ИСПОЛЬЗОВАНИЯ ИИ АДМИНИСТРАТИВНЫМИ СОТРУДНИКАМИ</h3>
+                    <p>6.1. Использование ИИ в административно-управленческой деятельности допускается для оптимизации рабочих процессов (делопроизводство, аналитика, планирование) при условии обеспечения цифрового суверенитета и безопасности данных.</p>
+                    <p>6.2. Сотрудники БГУ, ответственные за внедрение и использование ИИ-систем, обязаны:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Обеспечивать строгое соблюдение законодательства о защите персональных данных.</li>
+                        <li>Внедрять прозрачные протоколы хранения и обработки данных.</li>
+                        <li>Приоритетно использовать локальные, университетские или сертифицированные в установленном порядке ИИ-платформы.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 7 -->
+                <section id="ru-section7" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 7. СОБЛЮДЕНИЕ ПОЛОЖЕНИЯ И КОНТРОЛЬ</h3>
+                    <p>7.1. Для координации, мониторинга и консультативного сопровождения применения технологий ИИ в БГУ создается <b>«Совет по этике использования ИИ»</b> (далее – Совет).</p>
+                    <p>7.2. Состав Совета формируется из числа представителей профессорско-преподавательского состава, обучающихся, ИТ-специалистов, юристов и административных работников и утверждается приказом ректора БГУ.</p>
+                    <p>7.3. Совет осуществляет следующие функции:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Мониторинг практик использования ИИ в образовательной, научной и административной среде БГУ.</li>
+                        <li>Консультативное сопровождение преподавателей, студентов и сотрудников по вопросам этичного и правомерного применения ИИ.</li>
+                        <li>Подготовку предложений по актуализации и совершенствованию настоящего Положения с учётом технологического прогресса и правоприменительной практики.</li>
+                        <li>Рассмотрение спорных ситуаций и случаев недобросовестного использования ИИ, изложенных в Разделах 3-6.</li>
+                    </ul>
+                    <p>7.4. Нарушение настоящего Положения является нарушением устава БГУ и правил внутреннего распорядка и влечет за собой применение мер <b>дисциплинарного взыскания</b> (замечание, выговор, отчисление, увольнение) в порядке, установленном законодательством Республики Беларусь и ЛНПА БГУ.</p>
+                    <p>7.5. Решение о применении мер дисциплинарного взыскания принимается уполномоченным должностным лицом (ректором, проректором, деканом) на основании служебной записки, представления или заключения Совета.</p>
+                </section>
+
+                <!-- Раздел 8 -->
+                <section id="ru-section8" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЕЛ 8. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h3>
+                    <p>8.1. Настоящее Положение вступает в силу с момента его утверждения ректором БГУ.</p>
+                    <p>8.2. Положение является обязательным для исполнения всеми обучающимися и работниками БГУ.</p>
+                    <p>8.3. Изменения и дополнения в настоящее Положение вносятся в установленном порядке. Пересмотр Положения осуществляется по мере необходимости, но не реже одного раза в два года.</p>
+                    <p>8.4. Все вопросы, не урегулированные настоящим Положением, решаются в соответствии с действующим законодательством Республики Беларусь и иными ЛНПА БГУ.</p>
+                </section>
+            </div>
+
+            <!-- ========================== -->
+            <!-- === БЕЛАРУСКАЯ ВЕРСІЯ === -->
+            <!-- ========================== -->
+            <div id="content-by" class="lang-content bg-white shadow-lg rounded-lg p-6 md:p-10">
+                <div class="text-center mb-8">
+                    <p class="text-sm text-gray-600">ЗАЦВЕРДЖАНА</p>
+                    <p class="text-sm text-gray-600">Загадам рэктара БДУ</p>
+                    <p class="text-sm text-gray-600">ад «__» ________ 20__ г. № ____</p>
+                </div>
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">ПАЛАЖЭННЕ<br>аб выкарыстанні тэхналогій штучнага інтэлекту ў Беларускім дзяржаўным універсітэце</h2>
+
+                <!-- Раздел 1 BY -->
+                <section id="by-section1" class="content-section active space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 1. АГУЛЬНЫЯ ПАЛАЖЭННІ</h3>
+                    <p>1.1. Гэтае Палажэнне (далей – Палажэнне) вызначае прававыя, арганізацыйныя і этычныя асновы выкарыстання тэхналогій штучнага інтэлекту (далей – ШІ) у адукацыйнай, навукова-даследчай і адміністрацыйна-кіраўніцкай дзейнасці ўстановы адукацыі «Беларускі дзяржаўны ўніверсітэт» (далей – БДУ).</p>
+                    <p>1.2. Мэтай гэтага Палажэння з'яўляецца забеспячэнне адказнай, этычнай і прадуктыўнай інтэграцыі тэхналогій ШІ ва ўніверсітэцкае асяроддзе, накіраванай на павышэнне якасці адукацыі, развіццё навуковага патэнцыялу і аптымізацыю кіраўніцкіх працэсаў, пры безумоўным захаванні акадэмічных каштоўнасцей і правоў усіх удзельнікаў адукацыйнага працэсу.</p>
+                    <p>1.3. Для мэт гэтага Палажэння пад ШІ разумеюцца алгарытмічныя сістэмы і комплексы тэхналагічных рашэнняў (уключаючы вялікія моўныя мадэлі, нейронныя сеткі і інш.), здольныя выконваць творчыя, аналітычныя і іншыя задачы, якія традыцыйна патрабуюць удзелу чалавека.</p>
+                    <p>1.4. Рэгуляванне выкарыстання ШІ ў БДУ грунтуецца на прынцыпах:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li><b>Акадэмічнай сумленнасці:</b> Недапушчальнасць выкарыстання ШІ для плагіяту, фальсіфікацыі і падману.</li>
+                        <li><b>Педагагічнай прадуктыўнасці:</b> Выкарыстанне ШІ як інструмента для развіцця крытычнага мыслення, а не яго падмены.</li>
+                        <li><b>Празрыстасці:</b> Абавязковае дэклараванне выкарыстання ШІ ў выпадках, устаноўленых гэтым Палажэннем.</li>
+                        <li><b>Канфідэнцыяльнасці і бяспекі:</b> Абарона персанальных даных і іншай інфармацыі абмежаванага доступу.</li>
+                        <li><b>Адказнасці:</b> Асабістая адказнасць карыстальніка за выніковы рэзультат, атрыманы з прымяненнем ШІ.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 2 BY -->
+                <section id="by-section2" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 2. АГУЛЬНЫЯ АБМЕЖАВАННІ І ЗАБАРОНЫ</h3>
+                    <p>2.1. Ва ўсіх сферах дзейнасці ў БДУ <b>забараняецца</b> выкарыстанне тэхналогій ШІ для:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Фальсіфікацыі навуковых даных, адукацыйных вынікаў, даных справаздачнасці або любой іншай службовай інфармацыі.</li>
+                        <li>Стварэння, захоўвання або распаўсюджвання кантэнту, які парушае заканадаўства Рэспублікі Беларусь, статут БДУ, правілы ўнутранага распарадку, а таксама агульнапрынятыя этычныя нормы.</li>
+                        <li>Парушэння аўтарскіх правоў і правоў інтэлектуальнай уласнасці трэціх асоб.</li>
+                        <li>Перадачы персанальных даных, службовай інфармацыі або іншай інфармацыі абмежаванага доступу ў ШІ-сістэмы без належнай згоды суб'ектаў даных і (або) дазволу ўпаўнаважаных асоб БДУ.</li>
+                        <li>Прымянення несертыфікаваных, небяспечных або неэтычных ШІ-сэрвісаў, не адобраных Саветам па этыцы выкарыстання ШІ (Раздзел 7).</li>
+                        <li>Ажыццяўлення любых форм дыскрымінацыі, цкавання (булінгу) або стварэння варожага асяроддзя.</li>
+                    </ul>
+                </section>
+                
+                <!-- Раздел 3 BY -->
+                <section id="by-section3" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 3. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ НАВУЧЭНЦАМІ</h3>
+                    <p>3.1. Навучэнцы маюць права выкарыстоўваць ШІ як дапаможны інструмент для пошуку інфармацыі, аналізу даных, вывучэння новых тэм і падрыхтоўкі да заняткаў пры ўмове захавання акадэмічнай сумленнасці.</p>
+                    <p>3.2. <b>Абавязковае дэклараванне:</b> Пры выкананні пісьмовых работ (курсавых, дыпломных, эсэ, рэфератаў і інш.), якія падлягаюць ацэнцы, навучэнец <b>абавязаны</b> ў відавочнай форме (у тэксце работы або суправаджальным дакуменце) інфармаваць выкладчыка аб факце і ступені выкарыстання тэхналогій ШІ.</p>
+                </section>
+
+                <!-- Раздел 4 BY -->
+                <section id="by-section4" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 4. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ ВЫКЛАДЧЫКАМІ</h3>
+                    <p>4.1. Выкладчыкі маюць права інтэграваць ШІ ў навучальны працэс для ўзбагачэння метадычных матэрыялаў, распрацоўкі заданняў і адаптацыі навучання.</p>
+                    <p>4.2. Выкладчыкі абавязаны:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Развіваць у навучэнцаў навыкі крытычнай ацэнкі інфармацыі, атрыманай ад ШІ.</li>
+                        <li>Выразна інфармаваць навучэнцаў аб дапушчальных і недапушчальных спосабах выкарыстання ШІ ў рамках вывучаемай дысцыпліны.</li>
+                        <li>Пры распрацоўцы заданняў і метадаў кантролю ведаў <b>зрушваць акцэнт</b> з рэпрадуктыўнага ўзнаўлення інфармацыі на аналіз працэсу рашэння, аргументацыю, інтэрпрэтацыю і практыка-арыентаваныя формы работы ў аўдыторыі.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 5 BY -->
+                <section id="by-section5" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 5. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ Ў НАВУКОВА-ДАСЛЕДЧЫХ МЭТАХ</h3>
+                    <p>5.1. Дапускаецца выкарыстанне ШІ для аналізу вялікіх даных, мадэлявання, апрацоўкі літаратуры і іншых дапаможных даследчых задач.</p>
+                    <p>5.2. Пры падрыхтоўцы навуковых публікацый даследчыкі БДУ абавязаны:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Крытычна правяраць і верыфікаваць даныя, атрыманыя з дапамогай ШІ.</li>
+                        <li>Празрыста ўказваць у раздзеле «Метадалогія» або «Падзякі» факт выкарыстання ШІ-інструментаў, калі іх уклад у даследаванне быў істотным.</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 6 BY -->
+                <section id="by-section6" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 6. РЭГЛАМЕНТАЦЫЯ ВЫКАРЫСТАННЯ ШІ АДМІНІСТРАЦЫЙНЫМІ СУПРАЦОЎНІКАМІ</h3>
+                    <p>6.1. Выкарыстанне ШІ ў адміністрацыйна-кіраўніцкай дзейнасці дапускаецца для аптымізацыі рабочых працэсаў (дзелаводства, аналітыка, планаванне) пры ўмове забеспячэння лічбавага суверэнітэту і бяспекі даных.</p>
+                </section>
+
+                <!-- Раздел 7 BY -->
+                <section id="by-section7" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 7. ЗАХАВАННЕ ПАЛАЖЭННЯ І КАНТРОЛЬ</h3>
+                    <p>7.1. Для каардынацыі, маніторынгу і кансультатыўнага суправаджэння прымянення тэхналогій ШІ ў БДУ ствараецца <b>«Савет па этыцы выкарыстання ШІ»</b> (далей – Савет).</p>
+                    <p>7.3. Савет ажыццяўляе наступныя функцыі:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Маніторынг практык выкарыстання ШІ.</li>
+                        <li>Кансультатыўнае суправаджэнне выкладчыкаў, студэнтаў і супрацоўнікаў.</li>
+                        <li>Падрыхтоўку прапаноў па актуалізацыі Палажэння.</li>
+                        <li>Разгляд спрэчных сітуацый і выпадкаў нядобрасумленнага выкарыстання ШІ.</li>
+                    </ul>
+                    <p>7.4. Парушэнне гэтага Палажэння з'яўляецца парушэннем статута БДУ і цягне за сабой прымяненне мер <b>дысцыплінарнага спагнання</b> (заўвага, вымова, адлічэнне, звальненне).</p>
+                </section>
+
+                <!-- Раздел 8 BY -->
+                <section id="by-section8" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">РАЗДЗЕЛ 8. ЗАКЛЮЧНЫЯ ПАЛАЖЭННІ</h3>
+                    <p>8.1. Гэтае Палажэнне ўступае ў сілу з моманту яго зацвярджэння рэктарам БДУ.</p>
+                    <p>8.2. Палажэнне з'яўляецца абавязковым для выканання ўсімі навучэнцамі і работнікамі БДУ.</p>
+                    <p>8.3. Перагляд Палажэння ажыццяўляецца па меры неабходнасці, але не радзей аднаго разу ў два гады.</p>
+                </section>
+            </div>
+
+
+            <!-- ======================= -->
+            <!-- === ENGLISH VERSION === -->
+            <!-- ======================= -->
+            <div id="content-en" class="lang-content bg-white shadow-lg rounded-lg p-6 md:p-10">
+                <div class="text-center mb-8">
+                    <p class="text-sm text-gray-600">APPROVED</p>
+                    <p class="text-sm text-gray-600">By order of the BSU Rector</p>
+                    <p class="text-sm text-gray-600">dated "__" ________ 20__ No. ____</p>
+                </div>
+                <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">REGULATION<br>on the use of artificial intelligence technologies at Belarusian State University</h2>
+
+                <!-- Section 1 EN -->
+                <section id="en-section1" class="content-section active space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 1. GENERAL PROVISIONS</h3>
+                    <p>1.1. This Regulation (hereinafter – the Regulation) defines the legal, organizational, and ethical framework for the use of artificial intelligence technologies (hereinafter – AI) in the educational, research, and administrative activities of the educational institution "Belarusian State University" (hereinafter – BSU).</p>
+                    <p>1.2. The purpose of this Regulation is to ensure the responsible, ethical, and productive integration of AI technologies into the university environment, aimed at improving the quality of education, developing scientific potential, and optimizing management processes, while unconditionally respecting academic values and the rights of all participants in the educational process.</p>
+                    <p>1.3. For the purposes of this Regulation, AI refers to algorithmic systems and complexes of technological solutions (including large language models, neural networks, etc.) capable of performing creative, analytical, and other tasks traditionally requiring human involvement.</p>
+                    <p>1.4. The regulation of AI use at BSU is based on the principles of:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li><b>Academic Integrity:</b> The inadmissibility of using AI for plagiarism, falsification, and deception.</li>
+                        <li><b>Pedagogical Productivity:</b> The use of AI as a tool for developing critical thinking, not replacing it.</li>
+                        <li><b>Transparency:</b> Mandatory declaration of AI use in cases established by this Regulation.</li>
+                        <li><b>Confidentiality and Security:</b> Protection of personal data and other restricted information.</li>
+                        <li><b>Accountability:</b> Personal responsibility of the user for the final result obtained with the use of AI.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 2 EN -->
+                <section id="en-section2" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 2. GENERAL RESTRICTIONS AND PROHIBITIONS</h3>
+                    <p>2.1. In all spheres of activity at BSU, the use of AI technologies is <b>prohibited</b> for:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Falsification of scientific data, educational results, reporting data, or any other official information.</li>
+                        <li>Creating, storing, or disseminating content that violates the legislation of the Republic of Belarus, the BSU charter, internal regulations, or generally accepted ethical norms.</li>
+                        <li>Violation of copyrights and intellectual property rights of third parties.</li>
+                        <li>Transferring personal data, official information, or other restricted information to AI systems without the proper consent of data subjects and/or authorization from authorized BSU officials.</li>
+                        <li>Using uncertified, unsafe, or unethical AI services not approved by the AI Ethics Council (Section 7).</li>
+                        <li>Engaging in any form of discrimination, bullying, or creating a hostile environment.</li>
+                    </ul>
+                </section>
+                
+                <!-- Section 3 EN -->
+                <section id="en-section3" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 3. REGULATION OF AI USE BY STUDENTS</h3>
+                    <p>3.1. Students are entitled to use AI as an auxiliary tool for searching for information, analyzing data,
+                        studying new topics, and preparing for classes, provided that academic integrity is observed.</p>
+                    <p>3.2. <b>Mandatory Declaration:</b> When completing written assignments (term papers, theses, essays,
+                        reports, etc.) that are subject to assessment, the student is <b>obliged</b> to explicitly inform the
+                        instructor (in the text of the work or an accompanying document) about the fact and extent of AI
+                        technology use.</p>
+                </section>
+
+                <!-- Section 4 EN -->
+                <section id="en-section4" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 4. REGULATION OF AI USE BY FACULTY</h3>
+                    <p>4.1. Faculty members are entitled to integrate AI into the educational process to enrich
+                        methodological materials, develop assignments, and adapt teaching.</p>
+                    <p>4.2. Faculty members are obliged to:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Develop students' skills in critically evaluating information obtained from AI.</li>
+                        <li>Clearly inform students about permissible and impermissible ways of using AI within the
+                            framework of the discipline being studied.</li>
+                        <li>When developing assignments and knowledge control methods, <b>shift the focus</b> from the
+                            reproductive reproduction of information to the analysis of the solution process,
+                            argumentation, interpretation, and practice-oriented forms of work in the classroom.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 EN -->
+                <section id="en-section5" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 5. REGULATION OF AI USE FOR RESEARCH PURPOSES</h3>
+                    <p>5.1. The use of AI is permitted for analyzing big data, modeling, processing literature, and other
+                        auxiliary research tasks.</p>
+                    <p>5.2. When preparing scientific publications, BSU researchers are obliged to:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Critically check and verify data obtained with the help of AI.</li>
+                        <li>Transparently indicate in the "Methodology" or "Acknowledgments" section the fact of
+                            using AI tools if their contribution to the research was significant.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 6 EN -->
+                <section id="en-section6" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 6. REGULATION OF AI USE BY ADMINISTRATIVE STAFF</h3>
+                    <p>6.1. The use of AI in administrative and managerial activities is permitted to optimize work
+                        processes (document management, analytics, planning) provided that digital sovereignty and data
+                        security are ensured.</p>
+                </section>
+
+                <!-- Section 7 EN -->
+                <section id="en-section7" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 7. COMPLIANCE AND MONITORING</h3>
+                    <p>7.1. To coordinate, monitor, and provide advisory support for the use of AI technologies at BSU,
+                        an <b>"AI Ethics Council"</b> (hereinafter – the Council) is established.</p>
+                    <p>7.3. The Council performs the following functions:</p>
+                    <ul class="list-disc list-inside pl-5 space-y-2">
+                        <li>Monitoring AI usage practices.</li>
+                        <li>Providing advisory support to faculty, students, and staff.</li>
+                        <li>Preparing proposals for updating the Regulation.</li>
+                        <li>Reviewing disputes and cases of unethical AI use.</li>
+                    </ul>
+                    <p>7.4. Violation of this Regulation is a violation of the BSU charter and internal regulations and
+                        entails the application of <b>disciplinary measures</b> (reprimand, censure, expulsion,
+                        dismissal) in accordance with the legislation of the Republic of Belarus.</p>
+                </section>
+
+                <!-- Section 8 EN -->
+                <section id="en-section8" class="content-section space-y-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 border-b-2 border-blue-200 pb-2 mb-4">SECTION 8. FINAL PROVISIONS</h3>
+                    <p>8.1. This Regulation comes into force from the moment of its approval by the BSU Rector.</p>
+                    <p>8.2. The Regulation is mandatory for all students and employees of BSU.</p>
+                    <p>8.3. Revisions to the Regulation shall be carried out as necessary, but at least once every two
+                        years.</p>
+                </section>
+            </div>
+            
+        </main>
+    </div>
+
+    <script>
+        // Функция для переключения языка
+        function switchLanguage(lang) {
+            // Переключение контента
+            const langContents = document.querySelectorAll('.lang-content');
+            langContents.forEach(content => {
+                if (content.id === 'content-' + lang) {
+                    content.style.display = 'block';
+                    content.classList.add('active');
+                } else {
+                    content.style.display = 'none';
+                    content.classList.remove('active');
+                }
+            });
+
+            // Переключение навигации
+            const langNavs = document.querySelectorAll('.lang-nav');
+            langNavs.forEach(nav => {
+                if (nav.id === 'nav-' + lang) {
+                    nav.style.display = 'block';
+                    nav.classList.add('active');
+                } else {
+                    nav.style.display = 'none';
+                    nav.classList.remove('active');
+                }
+            });
+
+            // Переключение активной кнопки языка
+            const langButtons = document.querySelectorAll('.lang-btn');
+            langButtons.forEach(btn => {
+                if (btn.innerText.toLowerCase() === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Показать первую секцию для выбранного языка
+            showSection(lang, lang + '-section1', true);
+        }
+
+        // Функция для отображения секции
+        function showSection(lang, sectionId, isLangSwitch = false) {
+            // Найти правильный контейнер контента
+            const langContent = document.getElementById('content-' + lang);
+            if (!langContent) return;
+
+            // Скрыть все секции внутри этого языкового контейнера
+            const sections = langContent.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+                section.classList.remove('active');
+            });
+
+            // Показать выбранную секцию
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+                activeSection.classList.add('active');
+            }
+
+            // Обновить активную ссылку в навигации
+            const langNav = document.getElementById('nav-' + lang);
+            if (!langNav) return;
+            
+            const navLinks = langNav.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + sectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Прокрутка к верху контента только при смене секции, а не языка
+            if (!isLangSwitch) {
+                 langContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Инициализация: показать первый раздел по умолчанию
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('ru'); // По умолчанию русский
+        });
+    </script>
+
+</body>
+</html>
